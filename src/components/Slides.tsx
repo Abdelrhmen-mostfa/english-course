@@ -19,7 +19,7 @@ const itemVariants = {
 };
 
 export const WelcomeSlide = () => (
-  <div className="flex flex-col items-center justify-center h-full space-y-8 text-center p-8 relative overflow-hidden">
+  <div className="flex flex-col items-center justify-center min-h-full space-y-8 text-center p-8 relative overflow-hidden">
     <div className="absolute top-10 left-10 text-6xl opacity-50 animate-bounce delay-100">🎈</div>
     <div className="absolute top-20 right-20 text-6xl opacity-50 animate-bounce delay-300">☀️</div>
     <div className="absolute bottom-20 left-20 text-6xl opacity-50 animate-bounce delay-500">🖍️</div>
@@ -46,7 +46,7 @@ export const RulesSlide = () => {
   ];
 
   return (
-    <div className="flex flex-col h-full p-8">
+    <div className="flex flex-col min-h-full p-8">
       <motion.h1 variants={itemVariants} className="text-3xl md:text-5xl font-display text-indigo-700 text-center mb-10 flex items-center justify-center gap-4">
         📚 Class Rules
       </motion.h1>
@@ -68,7 +68,7 @@ export const WarmupSlide = () => {
   const colors = ["bg-rose-400", "bg-orange-400", "bg-amber-400", "bg-emerald-400", "bg-cyan-400", "bg-violet-400"];
 
   return (
-    <div className="flex flex-col h-full p-8 relative">
+    <div className="flex flex-col min-h-full p-8 relative">
       <motion.h1 variants={itemVariants} className="text-3xl md:text-5xl font-display text-indigo-700 text-center mb-12 flex items-center justify-center gap-4">
         🎲 Warm-up Activity
       </motion.h1>
@@ -98,14 +98,14 @@ export const WarmupSlide = () => {
 };
 
 export const TextbookImageSlide = () => (
-  <div className="flex flex-col h-full p-8">
+  <div className="flex flex-col min-h-full p-8">
     <div className="flex-1 flex items-center justify-center relative">
         <div className="absolute top-0 left-10 text-6xl animate-bounce delay-75">✨</div>
         <div className="absolute bottom-10 right-10 text-6xl animate-bounce delay-150">🎨</div>
-        <div className="absolute top-1/2 right-4 text-5xl">🌴</div>
-        <div className="absolute bottom-1/4 left-4 text-5xl">☀️</div>
+        <div className="absolute top-1/2 right-4 text-5xl hidden md:block">🌴</div>
+        <div className="absolute bottom-1/4 left-4 text-5xl hidden md:block">☀️</div>
         
-        <div className="w-full max-w-5xl h-full max-h-[70vh] bg-slate-50 rounded-[3rem] border-[12px] border-indigo-300 shadow-2xl flex flex-col items-center justify-center p-8 relative overflow-hidden ring-8 ring-indigo-100 ring-offset-8 ring-offset-sky-50">
+        <div className="w-full max-w-5xl h-full min-h-[50vh] md:max-h-[70vh] bg-slate-50 rounded-[3rem] border-[12px] border-indigo-300 shadow-2xl flex flex-col items-center justify-center p-8 relative overflow-hidden ring-8 ring-indigo-100 ring-offset-8 ring-offset-sky-50 mt-4">
             <div className="absolute inset-0 border-8 border-white rounded-[2rem] pointer-events-none"></div>
             <Image className="w-32 h-32 text-indigo-300 mb-6" />
             <p className="text-2xl md:text-4xl font-bold text-indigo-400 font-display">Textbook Image 1 Goes Here</p>
@@ -116,10 +116,10 @@ export const TextbookImageSlide = () => (
 );
 
 export const TextbookDialogueSlide = () => (
-  <div className="flex flex-col h-full p-8 relative overflow-hidden">
-      <div className="absolute top-10 left-10 text-6xl animate-pulse text-yellow-400">💥</div>
-      <div className="absolute top-20 right-10 text-6xl animate-pulse text-sky-400 delay-100">🗯️</div>
-      <div className="absolute bottom-10 left-20 text-6xl animate-pulse text-pink-400 delay-200">💬</div>
+  <div className="flex flex-col min-h-full p-8 relative overflow-hidden">
+      <div className="absolute top-10 left-10 text-4xl md:text-6xl animate-pulse text-yellow-400">💥</div>
+      <div className="absolute top-20 right-10 text-4xl md:text-6xl animate-pulse text-sky-400 delay-100">🗯️</div>
+      <div className="absolute bottom-10 left-20 text-4xl md:text-6xl animate-pulse text-pink-400 delay-200">💬</div>
 
       <motion.h1 variants={itemVariants} className="text-3xl md:text-5xl font-display text-indigo-700 text-center mb-4 z-10 font-bold">
           Story Dialogue
@@ -129,7 +129,7 @@ export const TextbookDialogueSlide = () => (
       </motion.p>
 
       <motion.div variants={itemVariants} className="flex-1 flex items-center justify-center z-10 w-full">
-          <div className="w-full max-w-6xl h-full max-h-[60vh] bg-white rounded-3xl border-8 border-yellow-400 shadow-2xl flex flex-col items-center justify-center p-8 relative shadow-yellow-200/50 shadow-[0_0_40px]">
+          <div className="w-full max-w-6xl h-full min-h-[50vh] md:max-h-[60vh] bg-white rounded-3xl border-8 border-yellow-400 shadow-2xl flex flex-col items-center justify-center p-8 relative shadow-yellow-200/50 shadow-[0_0_40px]">
               <Image className="w-24 h-24 text-yellow-300 mb-4" />
               <p className="text-xl md:text-3xl font-bold text-yellow-500 font-display">Textbook Dialogue Image Goes Here</p>
               <p className="text-slate-400 mt-4 font-bold text-sm md:text-xl">(Replace this placeholder with the provided image)</p>
@@ -139,12 +139,12 @@ export const TextbookDialogueSlide = () => (
 );
 
 export const ReadingQuestionsSlide = () => (
-  <div className="flex flex-col h-full p-8 relative">
+  <div className="flex flex-col min-h-full p-8 relative">
       <motion.h1 variants={itemVariants} className="text-3xl md:text-5xl font-display text-indigo-700 text-center mb-10 z-10 font-bold flex items-center justify-center gap-4">
           ❓ Let's Answer Together ❓
       </motion.h1>
       <motion.div variants={itemVariants} className="flex-1 flex items-center justify-center z-10">
-          <div className="w-full max-w-5xl h-full max-h-[65vh] bg-sky-50 rounded-3xl border-8 border-white shadow-xl flex flex-col items-center justify-center p-8 relative ring-8 ring-sky-200 ring-offset-4 ring-offset-sky-50">
+          <div className="w-full max-w-5xl h-full min-h-[50vh] md:max-h-[65vh] bg-sky-50 rounded-3xl border-8 border-white shadow-xl flex flex-col items-center justify-center p-8 relative ring-8 ring-sky-200 ring-offset-4 ring-offset-sky-50 mt-4">
               <div className="absolute -top-6 -right-6 text-5xl md:text-7xl transform rotate-12 drop-shadow-md">🤔</div>
               <div className="absolute -bottom-6 -left-6 text-5xl md:text-7xl transform -rotate-12 drop-shadow-md">📝</div>
               <Image className="w-16 h-16 md:w-24 md:h-24 text-sky-300 mb-4" />
@@ -170,7 +170,7 @@ export const VocabularySlide = () => {
   ];
 
   return (
-    <div className="flex flex-col h-full p-4 md:p-6">
+    <div className="flex flex-col min-h-full p-4 md:p-6">
       <motion.h1 variants={itemVariants} className="text-2xl md:text-4xl font-display text-indigo-700 text-center mb-6 flex items-center justify-center gap-4 font-bold">
         🎯 Choose the Correct Picture
       </motion.h1>
@@ -222,7 +222,7 @@ export const NumbersSlide = () => {
   };
 
   return (
-    <div className="flex flex-col h-full p-4 md:p-8">
+    <div className="flex flex-col min-h-full p-4 md:p-8">
       <motion.h1 variants={itemVariants} className="text-3xl md:text-5xl font-display text-indigo-700 text-center mb-8 md:mb-16 flex items-center justify-center gap-4 font-bold">
         🏅 Ordinal Numbers
       </motion.h1>
@@ -248,7 +248,7 @@ export const NumbersSlide = () => {
 };
 
 export const GameSlide = () => (
-  <div className="flex flex-col h-full p-8 relative overflow-hidden">
+  <div className="flex flex-col min-h-full p-8 relative overflow-hidden">
       <div className="absolute top-10 left-10 text-6xl animate-bounce text-yellow-400"><Star className="fill-current w-20 h-20"/></div>
       <div className="absolute top-10 right-10 text-6xl animate-bounce delay-100 text-yellow-400"><Trophy className="fill-current w-20 h-20"/></div>
       <div className="absolute bottom-10 left-1/4 text-7xl text-pink-400 drop-shadow-md">🎊</div>
@@ -277,8 +277,8 @@ export const GameSlide = () => (
 );
 
 export const ThanksSlide = () => (
-  <div className="flex flex-col items-center justify-center h-full space-y-12 text-center p-8 relative overflow-hidden">
-    <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
+  <div className="flex flex-col items-center justify-center min-h-full space-y-12 text-center p-8 relative overflow-hidden">
+    <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
       {[...Array(20)].map((_, i) => (
         <motion.div
           key={i}
