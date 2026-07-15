@@ -30,30 +30,9 @@ export default function App() {
   const SlideComponent = slides[currentSlide];
 
   return (
-    <div className="h-screen w-screen bg-sky-50 flex flex-col font-sans text-slate-800 overflow-hidden">
-      {/* Main Presentation Area */}
-      <div className="flex-1 relative m-2 md:m-8 bg-white rounded-3xl md:rounded-[3rem] shadow-2xl border-4 md:border-8 border-white overflow-hidden flex flex-col">
-        {/* Colorful top border detail */}
-        <div className="h-2 md:h-4 w-full bg-gradient-to-r from-pink-400 via-yellow-400 to-sky-400 shrink-0" />
-        
-        <div className="flex-1 relative">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={currentSlide}
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -50 }}
-              transition={{ duration: 0.4, ease: "easeInOut" }}
-              className="absolute inset-0 w-full h-full overflow-y-auto overflow-x-hidden"
-            >
-              <SlideComponent />
-            </motion.div>
-          </AnimatePresence>
-        </div>
-      </div>
-
+    <div className="h-[100dvh] w-screen bg-sky-50 flex flex-col font-sans text-slate-800 overflow-hidden">
       {/* Navigation & Progress Bar */}
-      <div className="h-auto md:h-20 shrink-0 px-4 md:px-8 flex items-center justify-between pb-4 pt-2 md:pt-0 gap-2">
+      <div className="h-auto md:h-20 shrink-0 px-4 md:px-8 flex items-center justify-between pt-4 pb-2 md:py-4 gap-2 z-10">
         <button
           onClick={prevSlide}
           disabled={currentSlide === 0}
@@ -93,6 +72,27 @@ export default function App() {
         >
           <ChevronRight className="w-8 h-8 md:w-8 md:h-8" />
         </button>
+      </div>
+
+      {/* Main Presentation Area */}
+      <div className="flex-1 relative m-2 mt-0 md:m-8 md:mt-2 bg-white rounded-3xl md:rounded-[3rem] shadow-2xl border-4 md:border-8 border-white overflow-hidden flex flex-col mb-4 md:mb-8">
+        {/* Colorful top border detail */}
+        <div className="h-2 md:h-4 w-full bg-gradient-to-r from-pink-400 via-yellow-400 to-sky-400 shrink-0" />
+        
+        <div className="flex-1 relative">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentSlide}
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -50 }}
+              transition={{ duration: 0.4, ease: "easeInOut" }}
+              className="absolute inset-0 w-full h-full overflow-y-auto overflow-x-hidden"
+            >
+              <SlideComponent />
+            </motion.div>
+          </AnimatePresence>
+        </div>
       </div>
     </div>
   );
