@@ -1,0 +1,6 @@
+{
+  "name": "English Lesson Interactive Presentation",
+  "description": "A colorful, interactive educational presentation for primary school students learning English.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
