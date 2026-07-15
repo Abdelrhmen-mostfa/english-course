@@ -4,6 +4,7 @@ import {
   Clock, BookOpen, PenTool, MessageCircle, Hand, Users, 
   Play, QrCode, Image, Star, Trophy
 } from 'lucide-react';
+import { ImageUploader } from './ImageUploader';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -106,10 +107,8 @@ export const TextbookImageSlide = () => (
         <div className="absolute bottom-1/4 left-4 text-5xl hidden md:block">☀️</div>
         
         <div className="w-full max-w-5xl h-full min-h-[50vh] md:max-h-[70vh] bg-slate-50 rounded-[3rem] border-[12px] border-indigo-300 shadow-2xl flex flex-col items-center justify-center p-8 relative overflow-hidden ring-8 ring-indigo-100 ring-offset-8 ring-offset-sky-50 mt-4">
-            <div className="absolute inset-0 border-8 border-white rounded-[2rem] pointer-events-none"></div>
-            <Image className="w-32 h-32 text-indigo-300 mb-6" />
-            <p className="text-2xl md:text-4xl font-bold text-indigo-400 font-display">Textbook Image 1 Goes Here</p>
-            <p className="text-slate-400 mt-4 font-bold text-sm md:text-xl">(Replace this placeholder with the provided image)</p>
+            <div className="absolute inset-0 border-8 border-white rounded-[2rem] pointer-events-none z-10"></div>
+            <ImageUploader id="textbook-image-1" defaultText="Textbook Image 1 Goes Here" defaultImagePath="/images/textbook-image-1.jpg" />
         </div>
     </div>
   </div>
@@ -129,10 +128,8 @@ export const TextbookDialogueSlide = () => (
       </motion.p>
 
       <motion.div variants={itemVariants} className="flex-1 flex items-center justify-center z-10 w-full">
-          <div className="w-full max-w-6xl h-full min-h-[50vh] md:max-h-[60vh] bg-white rounded-3xl border-8 border-yellow-400 shadow-2xl flex flex-col items-center justify-center p-8 relative shadow-yellow-200/50 shadow-[0_0_40px]">
-              <Image className="w-24 h-24 text-yellow-300 mb-4" />
-              <p className="text-xl md:text-3xl font-bold text-yellow-500 font-display">Textbook Dialogue Image Goes Here</p>
-              <p className="text-slate-400 mt-4 font-bold text-sm md:text-xl">(Replace this placeholder with the provided image)</p>
+          <div className="w-full max-w-6xl bg-white rounded-3xl border-4 md:border-8 border-yellow-400 shadow-2xl flex items-center justify-center p-2 md:p-4 relative shadow-yellow-200/50 shadow-[0_0_40px] overflow-hidden min-h-[40vh]">
+              <ImageUploader id="story-dialogue" defaultText="Story Dialogue Image" defaultImagePath="/images/story-dialogue.jpg" />
           </div>
       </motion.div>
   </div>
@@ -143,13 +140,11 @@ export const ReadingQuestionsSlide = () => (
       <motion.h1 variants={itemVariants} className="text-3xl md:text-5xl font-display text-indigo-700 text-center mb-10 z-10 font-bold flex items-center justify-center gap-4">
           ❓ Let's Answer Together ❓
       </motion.h1>
-      <motion.div variants={itemVariants} className="flex-1 flex items-center justify-center z-10">
+      <motion.div variants={itemVariants} className="flex-1 flex items-center justify-center z-10 w-full">
           <div className="w-full max-w-5xl h-full min-h-[50vh] md:max-h-[65vh] bg-sky-50 rounded-3xl border-8 border-white shadow-xl flex flex-col items-center justify-center p-8 relative ring-8 ring-sky-200 ring-offset-4 ring-offset-sky-50 mt-4">
-              <div className="absolute -top-6 -right-6 text-5xl md:text-7xl transform rotate-12 drop-shadow-md">🤔</div>
-              <div className="absolute -bottom-6 -left-6 text-5xl md:text-7xl transform -rotate-12 drop-shadow-md">📝</div>
-              <Image className="w-16 h-16 md:w-24 md:h-24 text-sky-300 mb-4" />
-              <p className="text-xl md:text-3xl font-bold text-sky-600 font-display">Textbook Questions Image Goes Here</p>
-              <p className="text-slate-400 mt-4 font-bold text-sm md:text-xl">(Replace this placeholder with the provided image)</p>
+              <div className="absolute -top-6 -right-6 text-5xl md:text-7xl transform rotate-12 drop-shadow-md z-20">🤔</div>
+              <div className="absolute -bottom-6 -left-6 text-5xl md:text-7xl transform -rotate-12 drop-shadow-md z-20">📝</div>
+              <ImageUploader id="textbook-questions" defaultText="Textbook Questions Image Goes Here" defaultImagePath="/images/textbook-questions.jpg" />
           </div>
       </motion.div>
   </div>
