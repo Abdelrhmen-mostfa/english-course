@@ -39,7 +39,7 @@ export default function App() {
           className={`p-3 md:p-4 rounded-full flex items-center justify-center transition-all flex-shrink-0 ${
             currentSlide === 0 
               ? 'text-sky-200 cursor-not-allowed bg-sky-100/50' 
-              : 'text-white bg-indigo-600 shadow-md hover:bg-indigo-700 hover:scale-105 hover:shadow-lg active:scale-95'
+              : 'text-black bg-indigo-200 shadow-md hover:bg-indigo-300 hover:scale-105 hover:shadow-lg active:scale-95 border-2 border-indigo-400'
           }`}
         >
           <ChevronLeft className="w-8 h-8 md:w-8 md:h-8" />
@@ -67,7 +67,7 @@ export default function App() {
           className={`p-3 md:p-4 rounded-full flex items-center justify-center transition-all flex-shrink-0 ${
             currentSlide === slides.length - 1 
               ? 'text-sky-200 cursor-not-allowed bg-sky-100/50' 
-              : 'text-white bg-indigo-600 shadow-md hover:bg-indigo-700 hover:scale-105 hover:shadow-lg active:scale-95'
+              : 'text-black bg-indigo-200 shadow-md hover:bg-indigo-300 hover:scale-105 hover:shadow-lg active:scale-95 border-2 border-indigo-400'
           }`}
         >
           <ChevronRight className="w-8 h-8 md:w-8 md:h-8" />

@@ -66,7 +66,7 @@ export const RulesSlide = () => {
 
 export const WarmupSlide = () => {
   const answers = ["It was great.", "It was exciting.", "It was wonderful.", "It was brilliant.", "It was amazing.", "It was fun."];
-  const colors = ["bg-rose-400", "bg-orange-400", "bg-amber-400", "bg-emerald-400", "bg-cyan-400", "bg-violet-400"];
+  const colors = ["bg-rose-200", "bg-orange-200", "bg-amber-200", "bg-emerald-200", "bg-cyan-200", "bg-violet-200"];
 
   return (
     <div className="flex flex-col min-h-full p-8 relative">
@@ -76,9 +76,9 @@ export const WarmupSlide = () => {
       
       <div className="flex flex-col items-center justify-start gap-8 md:gap-12 flex-1">
         <motion.div variants={itemVariants} className="w-full flex flex-col items-center">
-          <div className="bg-indigo-600 text-white p-6 md:p-8 rounded-3xl shadow-xl relative w-full max-w-4xl text-center border-4 border-indigo-300">
+          <div className="bg-indigo-100 text-black p-6 md:p-8 rounded-3xl shadow-xl relative w-full max-w-4xl text-center border-4 border-indigo-400">
             <h2 className="text-2xl md:text-5xl font-bold font-display tracking-wide">How was your last vacation?</h2>
-            <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-indigo-600 rotate-45 transform rounded-sm border-r-4 border-b-4 border-indigo-300"></div>
+            <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-indigo-100 rotate-45 transform rounded-sm border-r-4 border-b-4 border-indigo-400"></div>
           </div>
         </motion.div>
         
@@ -87,7 +87,7 @@ export const WarmupSlide = () => {
             <motion.div 
               key={idx} 
               variants={itemVariants} 
-              className={`${colors[idx]} text-white p-4 md:p-6 rounded-2xl md:rounded-[2rem] rounded-tl-none shadow-lg text-xl md:text-3xl font-bold text-center transform transition hover:scale-105 cursor-pointer flex items-center justify-center min-h-[80px] md:min-h-[140px] border-b-8 border-black/10`}
+              className={`${colors[idx]} text-black p-4 md:p-6 rounded-2xl md:rounded-[2rem] rounded-tl-none shadow-lg text-xl md:text-3xl font-bold text-center transform transition hover:scale-105 cursor-pointer flex items-center justify-center min-h-[80px] md:min-h-[140px] border-b-8 border-black/10`}
             >
               "{ans}"
             </motion.div>
@@ -257,7 +257,7 @@ export const GameSlide = () => (
           <a 
               href="https://create.kahoot.it/details/4e6165d3-f46a-469d-a883-1bd9d6828e07" 
               target="_blank" rel="noopener noreferrer"
-              className="bg-purple-600 hover:bg-purple-700 text-white text-2xl md:text-5xl font-display font-bold py-4 md:py-8 px-8 md:px-16 rounded-full shadow-2xl flex items-center gap-4 md:gap-6 transform transition hover:scale-110 hover:-translate-y-2 border-[4px] md:border-[6px] border-purple-400 text-center"
+              className="bg-purple-200 hover:bg-purple-300 text-black text-2xl md:text-5xl font-display font-bold py-4 md:py-8 px-8 md:px-16 rounded-full shadow-2xl flex items-center gap-4 md:gap-6 transform transition hover:scale-110 hover:-translate-y-2 border-[4px] md:border-[6px] border-purple-400 text-center"
           >
               <Play className="fill-current w-8 h-8 md:w-16 md:h-16 hidden md:block" />
               Let's Play Kahoot!
